@@ -1,3 +1,3 @@
 import streamlit
 
-streamlit.title('Arhaa') 
+streamlit.title('Arhaa lazy girl') 
