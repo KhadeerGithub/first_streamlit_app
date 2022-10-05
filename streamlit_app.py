@@ -38,6 +38,7 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
+ streamlit.stop()
 streamlit.header("Fruityvice Fruit Advice!")
 try:
 fruit_choice = streamlit.text_input('What fruit would you like information about?')
@@ -50,7 +51,7 @@ if not fruit_choice:
   except urlError as e:
     stramlit.error()
 
-  streamlit.stop()
+ 
   streamlit.write('The user entered ', fruit_choice)
 
 
