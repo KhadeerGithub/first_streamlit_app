@@ -23,7 +23,6 @@ my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 #To create the index
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
-stramlit.stop()
 
 # Let's put a pick list here so they can pick the fruit they want to include 
 
@@ -62,7 +61,7 @@ if not fruit_choice:
 
 
 streamlit.text(fruityvice_response)
-
+stramlit.stop()
 # write your own comment -what does the next line do? 
 
 # write your own comment - what does this do?
