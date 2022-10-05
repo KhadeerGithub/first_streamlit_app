@@ -33,7 +33,7 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
-fruit_choice = streamlit.text_input('What fruit would you like information about?','kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like information about?',fruit_choice)
 streamlit.write('The user entered ', fruit_choice)
 
 
@@ -65,5 +65,7 @@ my_data_row = my_cur.fetchall()
 streamlit.text("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
-fruit_choice = streamlit.text_input('What fruit would you like add?',fruit_choice)
-streamlit.write('Thanks for adding ', fruit_choice)
+fruit_choice1 = streamlit.text_input('What fruit would you like add?',fruit_choice1)
+streamlit.write('Thanks for adding ', fruit_choice1)
+
+my_cur.execute("SELECT * From RIVERY_DATABASE.PUBLIC.fruit_load_list")
