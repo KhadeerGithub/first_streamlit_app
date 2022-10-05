@@ -14,6 +14,7 @@ streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
 streamlit.text('🐔 Hard-Boiled Free-Range Egg')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
+streamlit.stop()
 
 # To import the csv file
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -53,7 +54,8 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
+
+
 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
