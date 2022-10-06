@@ -20,4 +20,8 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 #For provide the dropdown menu - uncomment below one
 streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 #To provide some default selections - uncomment below one
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+#streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+#Filter the table
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+streamlit.dataframe(fruits_to_show)
