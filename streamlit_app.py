@@ -19,3 +19,5 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 #Let's put a pick list here so they can pick the fruit they want to include 
 #For provide the dropdown menu - uncomment below one
 streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+#To provide some default selections - uncomment below one
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
